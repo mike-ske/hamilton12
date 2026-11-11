@@ -1,0 +1,3 @@
+<?php
+use Illuminate\Database\Migrations\Migration;use Illuminate\Database\Schema\Blueprint;use Illuminate\Support\Facades\Schema;
+return new class extends Migration{public function up():void{Schema::table('contact_inquiries',fn(Blueprint $t)=>$t->timestamp('consent_at')->nullable());}public function down():void{Schema::table('contact_inquiries',fn(Blueprint $t)=>$t->dropColumn('consent_at'));}};
